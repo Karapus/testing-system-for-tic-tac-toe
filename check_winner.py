@@ -1,4 +1,4 @@
-from random import randint
+from random import randint, random
 
 n,m,l = map(int,input().split())
 types = int(input())
@@ -7,4 +7,4 @@ for i in range(n):
     matrix.append(list(map(int,input().split())))
 
 #for i in range()
-print(randint(0,1)*randint(0,types)-1)
+print((random() < 0.1)*randint(1,types)-1)
