@@ -21,3 +21,4 @@ A[n-1][0] A[n-1][1] ... A[n-1][m-1]
 ```
 <i: index of player's turn line> <j: index of player's turn column>
 ```
+$$x_{1,2} = {-b\pm\sqrt{b^2 - 4ac} \over 2a}.$$
