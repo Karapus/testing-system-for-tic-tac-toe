@@ -1,6 +1,6 @@
 import random
 
-def play(n_lines, n_columns, n_types, player_idx, field):
+def play(n_lines, n_columns, n_players, player_idx, field):
     free = []
     for i in range(n_lines):
         for j in range(n_columns):
@@ -11,10 +11,10 @@ def play(n_lines, n_columns, n_types, player_idx, field):
 
 if __name__ == '__main__':
     n_lines, n_columns = map(int, input().split())
-    n_types = int(input())
+    n_players = int(input())
     player_idx = int(input())
     field = [list(map(int, input().split()))
              for i in range(n_lines)]
-    print(*play(n_lines, n_columns, n_types, player_idx, field))
+    print(*play(n_lines, n_columns, n_players, player_idx, field))
 
 

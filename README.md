@@ -4,9 +4,9 @@ The most bestest bloody optimized really cross-platform tic-tac-toe testing syst
 ## Input format for players program:
 ```
 <n: number of lines> <m: number of columns>
-<ntypes: number of payers>
-<i: index of player, 0 <= i < n>
-<Matrix A[i][j], -1 <= A[i][j] < ntypes, -1 for empty cell>
+<nplayers: number of payers>
+<i: index of player, 0 <= i < nplayers>
+<Matrix A[i][j], -1 <= A[i][j] < nplayers, -1 for empty cell>
 ```
 ### Matrix description:
 ```math
