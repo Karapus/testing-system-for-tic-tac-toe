@@ -2,6 +2,7 @@
 The most bestest bloody optimized really cross-platform tic-tac-toe testing system
 
 ## Input format for players program:
+lol
 	<n: number of lines> <m: number of columns>
 	<ntypes: number of payers>
 	<i: index of player, $(0 <= i < n)$>
@@ -16,4 +17,4 @@ A[1][0]   A[1][1]   ... A[1][m-1]
 A[n-1][0] A[n-1][1] ... A[n-1][m-1]
 ```
 ## Output format for players program:
-	<i: index of player's turn line> <j: index of player's turn column>
+    <i: index of player's turn line> <j: index of player's turn column>
