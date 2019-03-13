@@ -10,8 +10,8 @@ The most bestest bloody optimized really cross-platform tic-tac-toe testing syst
 ```
 ### Matrix description:
 ```math
-A[0][0]   A[0][1]   ... A[0][m-1]
-A[1][0]   A[1][1]   ... A[1][m-1]
+A[0][0]   A[0][1]  ...  A[0][m-1]
+A[1][0]   A[1][1]  ...  A[1][m-1]
 .                       .
 .                       .
 .                       .
