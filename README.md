@@ -10,11 +10,13 @@ lol $e$
 <Matrix A[i][j], -1 <= A[i][j] < ntypes, -1 for empty cell>
 ```
 ### Matrix description:
+```math
 A[0][0]   A[0][1]   ... A[0][m-1]
 A[1][0]   A[1][1]   ... A[1][m-1]
 .                       .
 .        $\idots$       .
 .                       .
 A[n-1][0] A[n-1][1] ... A[n-1][m-1]
+```
 ## Output format for players program:
     <i: index of player's turn line> <j: index of player's turn column>
