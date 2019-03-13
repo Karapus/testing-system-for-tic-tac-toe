@@ -17,4 +17,3 @@ if __name__ == '__main__':
              for i in range(n_lines)]
     print(*play(n_lines, n_columns, n_players, player_idx, field))
 
-
