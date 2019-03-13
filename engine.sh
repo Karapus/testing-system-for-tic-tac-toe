@@ -22,10 +22,16 @@ print_map(){
 	done
 	echo "$res"
 }
+
 nplayers=$3
 nplayers=${nplayers:-2}
 newline=$'\n' 
-i=0
-turn=$(echo "$n $m$newline$nplayers$newline$i$newline$(print_map)" | python bots/rand.py)
-echo "$turn"
-print_map
+
+for ((i=0;i<nplayers;i++)) do
+	turn=$(echo "$n $m$newline$nplayers$newline$i$newline$(print_map)" | python bots/rand.py)
+	echo "$n $m$newline$nplayers$newline$(print_map)$newline$turn$newline"
+	if [ $(echo "$n $m$newline$nplayers$newline$(print_map)$newline$turn$newline" | python check_field.py) == $'True' ]; then
+		echo "ok"	
+	fi
+	print_map
+done
