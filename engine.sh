@@ -26,5 +26,6 @@ nplayers=$3
 nplayers=${nplayers:-2}
 newline=$'\n' 
 i=0
-turn="$n $m$newline$nplayers$newline$i$newline$(print_map)"
+turn=$(echo "$n $m$newline$nplayers$newline$i$newline$(print_map)" | python bots/rand.py)
 echo "$turn"
+print_map
