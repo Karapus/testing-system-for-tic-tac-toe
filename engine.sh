@@ -21,17 +21,33 @@ print_map(){
 		res=$res$'\n'
 	done
 	echo "$res"
-}
+};
+
+draw_check(){
+	for i in "${map[@]}"
+       	do
+		if [ $i=-1 ]; then 
+			return 0
+		fi
+	done
+	return 1
+};
 
 nplayers=$3
 nplayers=${nplayers:-2}
 newline=$'\n' 
 
-echo ${map[${turn[0]} * $m + ${turn[1]}]}
+#echo ${map[${turn[0]} * $m + ${turn[1]}]}
 while [ 1 ]; do
 	for ((i=0;i<nplayers;i++)) do
+		echo "Player: $i; ${turn[0]}, ${turn[1]}" >> log.txt
+		if [ draw_check == 1 ]; then
+			echo "it's draw!"
+			print_map
+			exit
+		fi
 		turn=$(echo "$n $m$newline$nplayers$newline$i$newline$(print_map)" | python bots/rand.py)
-		if [ $(echo "$n $m$newline$nplayers$newline$(print_map)$newline$turn$newline" | python check_field.py) == $'False' ]; then
+		if [ $(echo "$n $m$newline$nplayers$newline$(print_map)$newline$turn$newline" | python check_field.py) = $'False' ]; then
 			echo "the $1 lose"
 			print_map
 			exit	
