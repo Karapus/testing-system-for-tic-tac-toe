@@ -59,7 +59,7 @@ do
 		fi
 		echo "${turn[0]}, ${turn[1]}" 
 		map[${turn[0]} * $m + ${turn[1]}]=$i
-		if [ $(echo "$n $m$newline$i$newline$(print_map)$newline" | python check_winner.py) = $'False' ]; then
+		if [ $(echo "$n $m$newline$i$newline$(print_map)$newline" | python check_winner.py) = $'True' ]; then
 			echo "the $i win"
 			print_map
 			exit
