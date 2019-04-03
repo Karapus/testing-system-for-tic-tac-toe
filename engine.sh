@@ -53,12 +53,17 @@ do
 		turn=(${turn})
 		echo "Player: $i; ${turn[0]}, ${turn[1]}" >> log.txt
 		if [ $(echo "$n $m$newline$nplayers$newline$(print_map)$newline${turn[@]}$newline" | python check_field.py) = $'False' ]; then
-			echo "the $1 lose"
+			echo "the $i lose"
 			print_map
 			exit	
 		fi
 		echo "${turn[0]}, ${turn[1]}" 
 		map[${turn[0]} * $m + ${turn[1]}]=$i
+		if [ $(echo "$n $m$newline$i$newline$(print_map)$newline" | python check_winner.py) = $'False' ]; then
+			echo "the $i win"
+			print_map
+			exit
+		fi
 		print_map
 	done
 done
