@@ -4,9 +4,9 @@ def check_bounds(x,y):
         return True
     return False
 
-def check_win(ind,x,y,stepx,stepy):
+def check_win(ind,x,y,stepx,stepy,length_of_winline = 5):
     res = True
-    for i in range(l):
+    for i in range(length_of_winline):
         if(check_bounds(x+stepx*i,y+stepy*i)):
             res = res and (matrix[x+stepx*i][y+stepy*i]==ind)
         else:
