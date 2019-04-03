@@ -1,5 +1,3 @@
-import random
-
 def play(n_lines, n_columns, n_players, player_idx, field):
     free = []
     for i in range(n_lines):
@@ -7,7 +5,7 @@ def play(n_lines, n_columns, n_players, player_idx, field):
             if field[i][j] == -1:
                 free.append((i, j))
 
-    return random.choice(free)
+    return free[0]
 
 if __name__ == '__main__':
     n_lines, n_columns = map(int, input().split())
